@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-title">Students Counseling Portal</div>
+      <div class="nav-actions">
+        <a href="../studentsignup/index.html" class="nav-btn student-signup">Student Sign Up</a>
+        <a href="../adminsignup/index.html" class="nav-btn admin-signup">Admin Sign Up</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="frost-card welcome-card">
+      <h1>Welcome to Students Counseling Portal</h1>
+      <p>Your journey to a better future begins here.</p>
+      <div class="button-group">
+        <button onclick="window.location.href='../studentsignin/index.html'">Student Sign In</button>
+        <button onclick="window.location.href='../adminsignin/index.html'">Admin Sign In</button>
+        <button class="oauth-btn google-btn" id="googleLoginBtn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" style="width:22px;margin-right:8px;vertical-align:-6px;">Login with Google</button>
+        <button class="oauth-btn github-btn" id="githubLoginBtn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:22px;margin-right:8px;vertical-align:-6px;">Login with GitHub</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

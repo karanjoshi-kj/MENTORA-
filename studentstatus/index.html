@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Status & Profile</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <header>
+    <div class="profile-header">
+      <div class="profile-info">
+        <img src="https://ui-avatars.com/api/?name=Student+Name&background=696cff&color=fff&size=96" alt="Student Avatar" class="avatar" />
+        <div>
+          <div class="name">Student Name</div>
+          <div class="email">student@example.com</div>
+        </div>
+      </div>
+      <button class="logout-btn" onclick="window.location.href='../logout/index.html'">Logout</button>
+    </div>
+  </header>
+  <main>
+    <!--not-allocated, partial, paid, or approved.-->
+    <!-- Update data-status for backend rendering! -->
+    <section class="frost-card stepper-card" data-status="not-allocated">
+      <div class="stepper">
+        <div class="step" id="step1">
+          <div class="step-icon"></div><span>Seat Allocation</span>
+        </div>
+        <div class="step" id="step2">
+          <div class="step-icon"></div><span>Payment</span>
+        </div>
+        <div class="step" id="step3">
+          <div class="step-icon"></div><span>Admin Approval</span>
+        </div>
+        <div class="step" id="step4">
+          <div class="step-icon"></div><span>Offer Letter</span>
+        </div>
+      </div>
+      <div class="step-status-info" id="stepMsg"></div>
+      <div class="action-row" id="actionRow"></div>
+    </section>
+
+    <section class="frost-card profile-details-card">
+      <h2>Your Profile Details</h2>
+      <div class="profile-details">
+        <div class="detail-row"><span class="detail-label">Name:</span><span>Student Name</span></div>
+        <div class="detail-row"><span class="detail-label">Email:</span><span>student@example.com</span></div>
+        <div class="detail-row"><span class="detail-label">Address:</span><span>123 Elegant Street, New Town, City</span></div>
+      </div>
+      <h2 style="margin-top:2rem;">Marks</h2>
+      <div class="marks-block">
+        <h3>High School</h3>
+        <div class="marks-table">
+          <div><span>Math</span><span>92</span></div>
+          <div><span>Science</span><span>96</span></div>
+          <div><span>English</span><span>89</span></div>
+          <div><span>Hindi</span><span>86</span></div>
+        </div>
+        <h3>10+2</h3>
+        <div class="marks-table">
+          <div><span>Physics</span><span>91</span></div>
+          <div><span>Chemistry</span><span>93</span></div>
+          <div><span>Math</span><span>95</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>

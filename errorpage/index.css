@@ -1,0 +1,60 @@
+:root {
+  --primary: #696cff;
+  --surface: #f6f8fa;
+  --glass: rgba(255,255,255,0.82);
+  --border: #e9eaf1;
+  --radius: 24px;
+  --font: 'Inter', Arial, sans-serif;
+  --shadow: 0 8px 36px rgba(25,28,54,0.13);
+  --text: #181c36;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--surface);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+}
+.frost-card {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  margin: auto;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+h1 {
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 900;
+  color: var(--primary);
+}
+p {
+  font-size: 1.3rem;
+  margin: 1rem 0 2rem;
+}
+button {
+  padding: 1em 2.6em;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  box-shadow: 0 5px 20px rgba(105,108,255,0.3);
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+button:hover {
+  background: #8b5cf6;
+  transform: translateY(-3px) scale(1.05);
+}

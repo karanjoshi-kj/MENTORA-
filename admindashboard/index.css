@@ -1,0 +1,129 @@
+:root {
+  --primary: #6f42c1;
+  --accent: #a76ddb;
+  --green: #16ba70;
+  --surface: #f6f8fa;
+  --glass: rgba(255,255,255,0.9);
+  --border: #d6c7f7;
+  --radius: 12px;
+  --font: 'Inter', Arial, sans-serif;
+  --shadow: 0 8px 36px rgba(111, 66, 193, 0.23);
+  --text: #2e1a62;
+  --btn-bg: var(--primary);
+  --btn-hover: var(--accent);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--surface);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--primary);
+  user-select: none;
+}
+
+#logoutBtn {
+  padding: 0.5em 1.4em;
+  border-radius: 14px;
+  border: 2px solid var(--primary);
+  background: none;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#logoutBtn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* Individual student table styling */
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  background: var(--glass);
+  overflow: hidden;
+}
+
+.student-table th, .student-table td {
+  padding: 1em 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+
+.student-table th {
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  user-select: none;
+}
+
+.student-table td select, .student-table td button {
+  font-size: 0.95rem;
+  padding: 0.35em 1em;
+  border-radius: var(--radius);
+  border: 1.4px solid var(--border);
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  white-space: nowrap;
+}
+
+.student-table td button {
+  background: var(--btn-bg);
+  color: white;
+  border: none;
+  box-shadow: 0 3px 10px rgba(111, 66, 193, 0.15);
+}
+
+.student-table td button:hover {
+  background: var(--btn-hover);
+}
+
+@media (max-width: 700px) {
+  .student-table th, .student-table td {
+    padding: 0.7em 0.5em;
+    font-size: 0.9rem;
+  }
+}
+/* Add this to your style.css */
+#tablesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+

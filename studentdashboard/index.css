@@ -1,0 +1,134 @@
+:root {
+  --bg-color: #f6f8fa;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --primary-color: #696cff;
+  --accent-color: #00cfff;
+  --text-color: #181c36;
+  --border-color: #e9eaf1;
+  --radius: 24px;
+  --font-family: 'Inter', Arial, sans-serif;
+  --shadow: 0 10px 40px rgba(105, 108, 255, 0.07);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+.dashboard-cards {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.frost-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 360px;
+  backdrop-filter: blur(12px);
+  border: 1.8px solid var(--border-color);
+}
+h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border-color);
+  background: #f4f8ff;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  outline-offset: 3px;
+  outline-color: transparent;
+  transition: outline-color 0.2s ease;
+  resize: vertical;
+}
+input:focus,
+textarea:focus {
+  outline-color: var(--primary-color);
+  background: #e7eaff;
+  border-color: var(--primary-color);
+}
+textarea {
+  min-height: 80px;
+}
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  margin-top: 1.8rem;
+}
+legend {
+  font-weight: 700;
+  color: var(--accent-color);
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 720px) {
+  .dashboard-cards {
+    flex-direction: column;
+  }
+  .frost-card {
+    min-width: 95vw;
+  }
+}
+.submit-container {
+  margin: 2rem auto 3rem auto;
+  max-width: 380px;
+  text-align: center;
+}
+
+.submit-container button {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 24px;
+  padding: 1.1em 3rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 30px rgba(105, 108, 255, 0.25);
+  transition: background 0.25s ease, transform 0.12s ease;
+  user-select: none;
+}
+
+.submit-container button:hover {
+  background: var(--accent-color);
+  color: var(--text-color);
+  transform: translateY(-2px) scale(1.04);
+}

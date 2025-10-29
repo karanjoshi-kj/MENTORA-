@@ -1,0 +1,172 @@
+:root {
+  --primary: #696cff;
+  --accent: #00cfff;
+  --surface: #f6f8fa;
+  --glass: rgba(255,255,255,0.85);
+  --border: #e9eaf1;
+  --radius: 24px;
+  --font: 'Inter', Arial, sans-serif;
+  --shadow: 0 8px 36px rgba(25,28,54,0.13);
+  --text: #181c36;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--surface);
+  color: var(--text);
+}
+header {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+.navbar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.nav-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+.nav-btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7em 2em;
+  border-radius: 13px;
+  box-shadow: 0 3px 16px rgba(105,108,255,0.14);
+  background: var(--primary);
+  transition: background 0.2s, transform 0.12s;
+  user-select: none;
+}
+.nav-btn.admin-signup {
+  background: var(--accent);
+  color: #181c36;
+}
+.nav-btn:hover {
+  background: #8b5cf6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.nav-btn.admin-signup:hover {
+  background: #181c36;
+  color: #fff;
+}
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px); /* adjust for header */
+}
+.frost-card {
+  background: var(--glass);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.13;
+}
+p {
+  font-size: 1.12rem;
+  margin: 0;
+}
+.button-group {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+button {
+  padding: 1em 2.5em;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  box-shadow: 0 5px 20px rgba(105,108,255,0.3);
+  transition: background 0.25s ease, transform 0.15s ease;
+  user-select: none;
+}
+button:hover {
+  background: #8b5cf6;
+  transform: translateY(-2px) scale(1.06);
+}
+@media (max-width: 700px){
+  .navbar {padding: 1rem 1.2rem 0.6rem 1.2rem;}
+  .frost-card {padding: 2rem 1rem;}
+  h1 {font-size: 1.5rem;}
+}
+@media (max-width: 440px){
+  .nav-title {font-size: 1rem;}
+  .nav-btn {padding: 0.65em 1em; font-size: 0.85rem;}
+}
+.oauth-btn {
+  background: #fff;
+  color: #181c36;
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65em;
+  font-size: 1.07rem;
+  box-shadow: 0 3px 12px #e6eaff;
+  margin-top: 0.3em;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.oauth-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--accent);
+}
+.google-btn {
+  border-color: #ea4335;
+}
+.google-btn:hover {
+  background: #ea4335;
+  color: #fff;
+}
+.github-btn {
+  border-color: #181c36;
+}
+.github-btn:hover {
+  background: #181c36;
+  color: #fff;
+}
+.oauth-btn img {
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+@media (max-width: 700px){
+  .button-group {gap: 1rem;}
+  .oauth-btn {font-size:0.95rem;}
+}

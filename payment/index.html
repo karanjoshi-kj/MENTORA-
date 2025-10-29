@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Upload Offer Letter</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <main>
+    <section class="frost-card">
+      <h2>Upload Offer Letter</h2>
+      <form id="uploadForm">
+        <label>Upload Offer Letter (image/pdf)</label>
+        <input type="file" id="receiptFile" accept="image/*,application/pdf" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <div class="status">
+        <span>Status:</span>
+        <span id="uploadStatus" class="payment-status pending">Pending</span>
+      </div>
+
+      <div class="preview-container">
+        <h3>Preview</h3>
+        <iframe id="filePreview" class="preview" style="display:none;"></iframe>
+      </div>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>

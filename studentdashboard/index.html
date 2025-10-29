@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <main>
+    <h1>Student Dashboard</h1>
+    <section class="dashboard-cards">
+      <div class="frost-card">
+        <h2>Personal Information</h2>
+        <form id="personalInfoForm">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Your Email" required />
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required />
+
+          <label for="contact">Contact</label>
+          <input type="tel" id="contact" placeholder="Contact Number" required />
+
+          <label for="address">Address</label>
+          <textarea id="address" placeholder="Address" required></textarea>
+        </form>
+      </div>
+      <div class="frost-card">
+        <h2>Marks</h2>
+        <form id="marksForm">
+          <fieldset>
+            <legend>High School</legend>
+            <label for="math-hs">Math</label>
+            <input type="number" id="math-hs" min="0" max="100" placeholder="Math" required />
+            <label for="science-hs">Science</label>
+            <input type="number" id="science-hs" min="0" max="100" placeholder="Science" required />
+            <label for="english-hs">English</label>
+            <input type="number" id="english-hs" min="0" max="100" placeholder="English" required />
+            <label for="hindi-hs">Hindi</label>
+            <input type="number" id="hindi-hs" min="0" max="100" placeholder="Hindi" required />
+          </fieldset>
+          <fieldset>
+            <legend>10+2</legend>
+            <label for="physics">Physics</label>
+            <input type="number" id="physics" min="0" max="100" placeholder="Physics" required />
+            <label for="chemistry">Chemistry</label>
+            <input type="number" id="chemistry" min="0" max="100" placeholder="Chemistry" required />
+            <label for="math-12">Math</label>
+            <input type="number" id="math-12" min="0" max="100" placeholder="Math" required />
+          </fieldset>
+        </form>
+      </div>
+      <div class="frost-card">
+        <h2>Branch Choices</h2>
+        <form id="choicesForm">
+          <label for="choice1">Choice 1</label>
+          <input type="text" id="choice1" placeholder="First branch choice" required />
+
+          <label for="choice2">Choice 2</label>
+          <input type="text" id="choice2" placeholder="Second branch choice" required />
+        </form>
+      </div>
+    </section>
+    <div class="submit-container">
+      <button type="button" onclick="submitbtn()">Submit</button>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
