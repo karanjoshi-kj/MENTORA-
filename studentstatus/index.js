@@ -165,7 +165,7 @@ window.onload = async function() {
     window.location.href = "../errorpage/index.html";
   }
 };
-
+// HLO 
 // Payment done handler for payment button
 async function paymentdone() {
   const token = localStorage.getItem("studenttoken");
