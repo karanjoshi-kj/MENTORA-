@@ -7,7 +7,7 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
 window.onload = async function() {
   const token = localStorage.getItem("admintoken");
   try {
-    const res = await fetch("http://localhost:3000/admin/candidates/info", {
+    const res = await fetch("https://mentora-5.onrender.com/admin/candidates/info", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -147,7 +147,7 @@ async function Seatallocate(branch, studentId) {
   console.log('Branch:', branch, 'StudentID:', studentId);
   const token = localStorage.getItem("admintoken");
   try {
-    const res = await fetch("http://localhost:3000/admin/branch/assign", {
+    const res = await fetch("https://mentora-5.onrender.com/admin/branch/assign", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
