@@ -1,22 +1,39 @@
 require('dotenv').config();
 const express = require("express");
-const app = express();
-app.use(express.json());
-const {StudentRouter} = require("./StudentRouter/index");
-const {AdminRouter} = require("./AdminRouter/index");
 const mongoose = require("mongoose");
-app.use("/student" , StudentRouter);
-app.use("/admin" , AdminRouter);
-function main()
-{
-    try{
-        mongoose.connect(process.env.MONGO_URL);
-    app.listen(3000); 
-    console.log("connected");
-    }
-    catch(e)
-    { 
-        console.log("Connection Problem Encountered ! : -" + e);
-    }
-} 
+const cors = require("cors");
+
+const { StudentRouter } = require("./StudentRouter/index");
+const { AdminRouter } = require("./AdminRouter/index");
+
+const app = express();
+
+// Middlewares
+app.use(cors());
+app.use(express.json());
+
+// Routes
+app.use("/student", StudentRouter);
+app.use("/admin", AdminRouter);
+
+// Test route (for Render testing)
+app.get("/", (req, res) => {
+  res.send("Mentora backend is live and working ✅");
+});
+
+// Database + Server connection
+async function main() {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("✅ MongoDB Connected Successfully");
+
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  } catch (e) {
+    console.error("❌ Connection Problem Encountered:", e);
+  }
+}
+
 main();
