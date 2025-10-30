@@ -3,7 +3,7 @@ mongoose.connect(process.env.MONGO_URL);
 const Schema = mongoose.Schema;
 
 const Student = new Schema({
-    Email : {unique : true , type : String} ,
+    Email : {unique : false , type : String} ,
     Password : String , 
     Name : String , 
     Dob : String , 
