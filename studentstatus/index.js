@@ -126,7 +126,7 @@ async function settup(data) {
 async function downloadReceipt(studentId) {
   const token = localStorage.getItem("studenttoken");
   try {
-    const res = await fetch(`http://localhost:3000/admin/paymentreciept/download`, {
+    const res = await fetch(`https://mentora-5.onrender.com/admin/paymentreciept/download`, {
       method: "GET",
       headers: { "token": token }
     });
@@ -151,7 +151,7 @@ async function downloadReceipt(studentId) {
 window.onload = async function() {
   const token = localStorage.getItem("studenttoken");
   try {
-    const res = await fetch("http://localhost:3000/student/Profile/info", {
+    const res = await fetch("https://mentora-5.onrender.com/student/Profile/info", {
       method: "GET",
       headers: { "Content-Type": "application/json", "token": token },
     });
@@ -170,7 +170,7 @@ window.onload = async function() {
 async function paymentdone() {
   const token = localStorage.getItem("studenttoken");
   try {
-    const res = await fetch("http://localhost:3000/student/Payment/done", {
+    const res = await fetch("https://mentora-5.onrender.com/student/Payment/done", {
       method: "POST",
       headers: { "Content-Type": "application/json", "token": token },
     });
