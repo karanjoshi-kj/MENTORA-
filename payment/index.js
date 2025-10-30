@@ -24,7 +24,7 @@ document.getElementById("uploadForm").addEventListener("submit", async (e) => {
   uploadStatus.style.color = "#005b96";
 
   try {
-    const res = await fetch("http://localhost:3000/admin/paymentreciept/upload", {
+    const res = await fetch("https://mentora-5.onrender.com/admin/paymentreciept/upload", {
       method: "POST",
       body: formData,
     });

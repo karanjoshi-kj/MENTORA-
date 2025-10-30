@@ -15,7 +15,7 @@ async function submitbtn()
     const hindihs = Number(document.getElementById("hindi-hs").value);
     try{
         console.log("hi i");
-        const res = await fetch("http://localhost:3000/student/apply/seat", {
+        const res = await fetch("https://mentora-5.onrender.com/student/apply/seat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({Email : email,
