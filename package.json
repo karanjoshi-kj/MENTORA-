@@ -1,13 +1,13 @@
 {
-  "name": "bp",
+  "name": "mentora-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for Mentora project using Express and MongoDB",
   "main": "express.js",
   "scripts": {
     "start": "node express.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Karan Joshi",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
