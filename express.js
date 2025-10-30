@@ -12,16 +12,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routers
+// Routes
 app.use("/student", StudentRouter);
 app.use("/admin", AdminRouter);
 
-// ✅ Default route for testing (important for Render)
+// Test route (for Render testing)
 app.get("/", (req, res) => {
-  res.status(200).send("✅ Mentora Backend is Live on Render!");
+  res.send("Mentora backend is live and working ✅");
 });
 
-// MongoDB + Server connection
+// Database + Server connection
 async function main() {
   try {
     await mongoose.connect(process.env.MONGO_URL);
@@ -31,8 +31,8 @@ async function main() {
     app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
     });
-  } catch (err) {
-    console.error("❌ MongoDB Connection Failed:", err);
+  } catch (e) {
+    console.error("❌ Connection Problem Encountered:", e);
   }
 }
 
