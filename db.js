@@ -7,7 +7,7 @@ const Student = new Schema({
     Password : String , 
     Name : String , 
     Dob : String , 
-    Contact : {unique : true , type : Number , sparse : true} , 
+    Contact : {type : Number , sparse : true} , 
     Address : String , 
     HSMaths : Number ,
     HSEnglish : Number ,
