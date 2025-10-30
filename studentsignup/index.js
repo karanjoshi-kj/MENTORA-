@@ -21,24 +21,28 @@ async function submitbtn()
   if(password == cpassword)
   {
     try{
-    const res = await fetch("http://localhost:3000/student/signup", {
+    const res = await fetch("https://mentora-3.onrender.com/student/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ Name : name
                             , Email : email
                             , Password : password })
         });
+        console.log(res);
+        
         if(res.ok)
         {
             window.location.href = "../studentdashboard/index.html";
         }
         else
-        {
+          {
+          console.log(res);
            window.location.href = "../errorpage/index.html";
         }
     } 
     catch(e)
     {
+      console.log(e);
        window.location.href = "../errorpage/index.html";
     }
   }
