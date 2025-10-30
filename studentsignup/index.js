@@ -21,7 +21,7 @@ async function submitbtn()
   if(password == cpassword)
   {
     try{
-    const res = await fetch("https://mentora-3.onrender.com/student/signup", {
+    const res = await fetch("https://mentora-5.onrender.com/student/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ Name : name
